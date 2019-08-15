@@ -1,0 +1,111 @@
+{
+    "extends": "airbnb",
+
+    "parser": "babel-eslint",
+
+    "plugins": ["react", "jsx-a11y", "import"],
+
+    "rules": {
+        "indent": [2, 4, { "SwitchCase": 1 }],
+        "no-use-before-define": 0,
+        "max-len": [2, 120, 4, {
+            "ignoreUrls": true,
+            "ignoreComments": false
+        }],
+        "jsx-quotes": [2, "prefer-double"],
+        "arrow-body-style": 0,
+
+        "no-console": [1, { "allow": ["warn", "error"] }],
+
+        "react/forbid-prop-types": 0,
+        "react/no-unescaped-entities": 0,
+        "react/require-default-props": 0,
+        "react/no-array-index-key": 1,
+        "react/jsx-one-expression-per-line": 0,
+        "react/destructuring-assignment": 0,
+        "react/jsx-wrap-multilines": 0,
+        "react/no-did-update-set-state": 0,
+        "react/no-did-mount-set-state": 0,
+        "react/jsx-filename-extension": 0,
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-indent": [0, 4],
+        "react/jsx-max-props-per-line": [2, {"maximum": 3}],
+        "react/jsx-no-bind": [2, {
+            "ignoreRefs": true,
+            "allowArrowFunctions": true
+        }],
+        "react/prop-types": 0,
+        "react/jsx-quotes": 0,
+        "react/prefer-stateless-function" : 0,
+        "react/require-extension": 0,
+        "react/sort-comp": [2, {
+            "order": [
+                "static-methods",
+                "lifecycle",
+                "/^handle.+$/",
+                "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+                "everything-else",
+                "/^render.+$/",
+                "render"
+            ]
+        }],
+
+        "import/no-unresolved": 1,
+        "import/no-cycle": 0,
+
+        "linebreak-style": "off",
+        "implicit-arrow-linebreak": 0,
+        "function-paren-newline": 0,
+        "no-restricted-globals": 0,
+        "comma-dangle": [
+            "error", {
+                "arrays": "never",
+                "objects": "always-multiline",
+                "imports": "never",
+                "exports": "never",
+                "functions": "never",
+            },
+        ],
+        "arrow-parens": 0,
+        "object-curly-newline": 0,
+        "no-restricted-imports": 0,
+        "click-events-have-key-events": 0,
+        "no-plusplus": 1,
+        "no-return-await": 0,
+
+        "jsx-a11y/anchor-is-valid": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "jsx-a11y/no-noninteractive-tabindex": 0,
+    },
+
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "es6": true
+    },
+
+    "settings": {
+        "import/resolver": { "webpack": { "config": "webpack.dev.config.js" } }
+    },
+
+    "globals": {
+        "$": true,
+        "ga": true,
+        "l": true,
+        "sprintf": true,
+        "nl": true,
+        "logger": true,
+        "num": true,
+        "jest": true,
+        "expect": true,
+        "Brick": true
+    },
+
+    "parserOptions": {
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    }
+}
